@@ -2,8 +2,9 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import { readdirSync, copyFileSync, mkdirSync } from "fs";
 
-const ciPagesUrl = process.env.CI_PAGES_URL;
-const base = ciPagesUrl ? new URL(ciPagesUrl).pathname : "/";
+const base = process.env.GITHUB_ACTIONS
+  ? `/${process.env.GITHUB_REPOSITORY?.split("/")[1] ?? ""}/`
+  : "/";
 
 export default defineConfig({
   base,
