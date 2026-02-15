@@ -16,5 +16,8 @@ export async function loadScreen(screenFile: string): Promise<void> {
   }
 
   app.innerHTML = html;
+  app.querySelectorAll<HTMLImageElement>("img[src^='/']").forEach((img) => {
+    img.src = `${baseUrl}${img.getAttribute("src")!.slice(1)}`;
+  });
   bindInteractions(app);
 }
