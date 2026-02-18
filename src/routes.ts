@@ -31,4 +31,24 @@ export const routes = {
     title: "Kasvi – Kunnossa",
     screen: "plant-healthy-baker-street.html",
   },
+  "flow2-household": {
+    title: "Kotitalous",
+    screen: "flow2-household.html",
+  },
+  "flow2-add-plant-method": {
+    title: "Lisää kasvi",
+    screen: "flow2-add-plant-method.html",
+  },
+  "flow2-camera": {
+    title: "Kamera",
+    screen: "flow2-camera.html",
+  },
+  "flow2-add-plant-form": {
+    title: "Kasvin tiedot",
+    screen: "flow2-add-plant-form.html",
+  },
+  "flow2-plant-added": {
+    title: "Kotitalous",
+    screen: "flow2-plant-added.html",
+  },
 } as const;

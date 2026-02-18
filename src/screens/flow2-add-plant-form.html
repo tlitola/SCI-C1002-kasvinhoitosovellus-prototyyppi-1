@@ -1,0 +1,53 @@
+<main class="screen">
+  <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1.25rem;">
+    <img style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;" src="/images/plant_water.png" alt="Peikonlehti">
+  </div>
+
+  <form class="plant-form" onsubmit="return false;">
+    <div class="form-field">
+      <label for="plant-name">Kasvin nimi</label>
+      <input id="plant-name" type="text" value="Peikonlehti">
+    </div>
+
+    <div class="form-field">
+      <label for="watering-freq">Kastelutiheys (päiviä)</label>
+      <input id="watering-freq" type="number" value="7">
+    </div>
+
+    <div class="form-field">
+      <label for="watering-amount">Kastelumäärä (dl)</label>
+      <input id="watering-amount" type="number" value="2">
+    </div>
+
+    <div class="form-field">
+      <label for="notes">Muistiinpanot</label>
+      <input id="notes" type="text" value="Viihtyy epäsuorassa valossa">
+    </div>
+
+    <div class="form-field">
+      <label for="plant-size">Kasvin koko (cm)</label>
+      <input id="plant-size" type="number" value="45">
+    </div>
+
+    <div class="form-field">
+      <label for="pot-size">Ruukun koko (l)</label>
+      <input id="pot-size" type="number" value="3">
+    </div>
+
+    <div class="form-field">
+      <label for="watering-method">Kastelutapa</label>
+      <select id="watering-method">
+        <option selected>Anna maan kuivua</option>
+        <option>Pidä maa kosteana</option>
+        <option>Kastele runsaasti ja anna kuivua</option>
+        <option>Pohjakastelu</option>
+      </select>
+    </div>
+
+    <p style="font-size: 0.85rem; color: #666; font-style: italic;">
+      Lopullinen kastelutiheys määräytyy näiden ohjeiden ja kasvista kerätyn sensoridatan perusteella.
+    </p>
+
+    <button class="btn btn--primary" data-nav="flow2-plant-added" style="width: 100%;">Lisää kasvi</button>
+  </form>
+</main>
