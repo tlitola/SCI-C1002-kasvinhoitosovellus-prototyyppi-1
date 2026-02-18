@@ -12,7 +12,7 @@ export function initRouter(): void {
 
   // Default route
   page("/", () => {
-    page.redirect("/select-household");
+    page.redirect("/flow-select");
   });
 
   page({ hashbang: true });

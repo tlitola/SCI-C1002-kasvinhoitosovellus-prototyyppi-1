@@ -1,4 +1,8 @@
 export const routes = {
+  "flow-select": {
+    title: "Kasvinhoitosovellus",
+    screen: "flow-select.html",
+  },
   "select-household": {
     title: "Valitse talous",
     screen: "select-household.html",
