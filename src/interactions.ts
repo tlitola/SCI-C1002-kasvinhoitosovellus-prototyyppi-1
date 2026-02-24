@@ -1,5 +1,8 @@
 import page from "page";
 
+// Navigation stack — supports multiple levels of back navigation
+const backStack: string[] = [];
+
 // Stop any active camera stream when navigating to a new screen
 let activeStream: MediaStream | null = null;
 
@@ -11,11 +14,21 @@ function stopActiveStream() {
 export function bindInteractions(container: HTMLElement): void {
   stopActiveStream();
 
-  // data-nav: navigate to a route
+  // data-nav: push current route onto stack, then navigate forward
   container.querySelectorAll<HTMLElement>("[data-nav]").forEach((el) => {
     el.addEventListener("click", () => {
       const target = el.dataset.nav!;
+      const current = window.location.hash.replace(/^#!\/?/, "");
+      if (current) backStack.push(current);
       page.show(`/${target}`);
+    });
+  });
+
+  // data-back: pop the stack and navigate to the previous route
+  container.querySelectorAll<HTMLElement>("[data-back]").forEach((el) => {
+    el.addEventListener("click", () => {
+      const dest = backStack.pop();
+      if (dest) page.show(`/${dest}`);
     });
   });
 

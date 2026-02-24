@@ -3,37 +3,41 @@ export const routes = {
     title: "Kasvinhoitosovellus",
     screen: "flow-select.html",
   },
-  "select-household": {
+  "flow1-select-household": {
     title: "Valitse talous",
-    screen: "select-household.html",
+    screen: "flow1-select-household.html",
   },
-  "household-watered": {
+  "flow1-select-household-happy": {
+    title: "Valitse talous",
+    screen: "flow1-select-household-happy.html",
+  },
+  "flow1-household-watered": {
     title: "Dipoli",
-    screen: "household-watered.html",
+    screen: "flow1-household-watered.html",
   },
-  "household-attention": {
+  "flow1-household-attention": {
     title: "Dipoli",
-    screen: "household-attention.html",
+    screen: "flow1-household-attention.html",
   },
-  "household-happy": {
+  "flow1-household-happy": {
     title: "221B Baker Street",
-    screen: "household-happy.html",
+    screen: "flow1-household-happy.html",
   },
-  "plant-needs-watering": {
+  "flow1-plant-needs-watering": {
     title: "Kasvi – Kastelu tarpeen",
-    screen: "plant-needs-watering.html",
+    screen: "flow1-plant-needs-watering.html",
   },
-  "plant-watered": {
+  "flow1-plant-watered": {
     title: "Kasvi – Kasteltu",
-    screen: "plant-watered.html",
+    screen: "flow1-plant-watered.html",
   },
-  "plant-healthy": {
+  "flow1-plant-healthy": {
     title: "Kasvi – Kunnossa",
-    screen: "plant-healthy.html",
+    screen: "flow1-plant-healthy.html",
   },
-  "plant-healthy-baker-street": {
+  "flow1-plant-healthy-baker-street": {
     title: "Kasvi – Kunnossa",
-    screen: "plant-healthy-baker-street.html",
+    screen: "flow1-plant-healthy-baker-street.html",
   },
   "flow2-household": {
     title: "Kotitalous",
