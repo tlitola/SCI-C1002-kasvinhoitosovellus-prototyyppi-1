@@ -468,3 +468,28 @@ body {
 .share-copy-btn--copied {
   background: #555;
 }
+
+/* Reassurance callout box */
+.reassurance-box {
+  width: 100%;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.reassurance-box__heading {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #5d4037;
+}
+
+.reassurance-box__body {
+  font-size: 0.88rem;
+  color: #6d4c41;
+  line-height: 1.5;
+}

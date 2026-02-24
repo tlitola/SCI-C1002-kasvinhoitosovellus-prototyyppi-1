@@ -55,4 +55,20 @@ export const routes = {
     title: "Kotitalous",
     screen: "flow2-plant-added.html",
   },
+  "flow3-household": {
+    title: "Dipoli",
+    screen: "flow3-household.html",
+  },
+  "flow3-plant-overdue": {
+    title: "Kasvi – Myöhässä",
+    screen: "flow3-plant-overdue.html",
+  },
+  "flow3-plant-watered": {
+    title: "Kasvi – Kasteltu",
+    screen: "flow3-plant-watered.html",
+  },
+  "flow3-household-ok": {
+    title: "Dipoli",
+    screen: "flow3-household-ok.html",
+  },
 } as const;
