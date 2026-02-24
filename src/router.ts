@@ -24,4 +24,13 @@ export function initRouter(): void {
   });
 
   page({ hashbang: true });
+
+  // page.js skips the hashchange listener when the History API is present,
+  // relying on popstate instead. But popstate doesn't fire on manual URL bar
+  // edits — only hashchange does. Handle it ourselves.
+  window.addEventListener("hashchange", () => {
+    const hash = window.location.hash;
+    const path = hash.startsWith("#!") ? hash.slice(2) : "/";
+    page.show(path || "/");
+  });
 }
