@@ -14,6 +14,10 @@ export function initRouter(): void {
     });
   }
 
+  // Stable flow entry points
+  page("/flow_1", () => { page.redirect("/flow1-select-household"); });
+  page("/flow_2", () => { page.redirect("/flow2-household"); });
+
   // Default route
   page("/", () => {
     page.redirect("/flow-select");
