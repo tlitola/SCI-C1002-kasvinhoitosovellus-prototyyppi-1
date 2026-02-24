@@ -39,6 +39,10 @@ export const routes = {
     title: "Kasvi – Kunnossa",
     screen: "flow1-plant-healthy-baker-street.html",
   },
+  "flow1-plant-healthy-vehka": {
+    title: "Kasvi – Kunnossa",
+    screen: "flow1-plant-healthy-vehka.html",
+  },
   "flow2-household": {
     title: "Kotitalous",
     screen: "flow2-household.html",
