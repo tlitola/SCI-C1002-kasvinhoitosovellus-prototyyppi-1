@@ -1,45 +1,45 @@
 <main class="screen">
   <button class="back-link" data-back>← Takaisin</button>
   <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1.25rem;">
-    <img style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;" src="/images/plant_1.webp" alt="Peikonlehti">
+    <img style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;" src="/images/plant_3.webp" alt="Vehka">
   </div>
 
   <form class="plant-form" onsubmit="return false;">
     <div class="form-field">
       <label for="plant-name">Kasvin nimi</label>
-      <input id="plant-name" type="text" value="Peikonlehti">
+      <input id="plant-name" type="text" value="Vehka">
     </div>
 
     <div class="form-field">
       <label for="watering-freq">Arvioitu kastelutiheys (päiviä)</label>
-      <input id="watering-freq" type="number" value="7">
+      <input id="watering-freq" type="number" value="4">
     </div>
 
     <div class="form-field">
       <label for="watering-amount">Arvioitu kastelumäärä (dl)</label>
-      <input id="watering-amount" type="number" value="2">
+      <input id="watering-amount" type="number" value="1.5">
     </div>
 
     <div class="form-field">
       <label for="notes">Muistiinpanot</label>
-      <input id="notes" type="text" value="Viihtyy epäsuorassa valossa">
+      <input id="notes" type="text" value="Viihtyy kosteassa ympäristössä">
     </div>
 
     <div class="form-field">
       <label for="plant-size">Kasvin koko (cm)</label>
-      <input id="plant-size" type="number" value="45">
+      <input id="plant-size" type="number" value="40">
     </div>
 
     <div class="form-field">
       <label for="pot-size">Ruukun koko (l)</label>
-      <input id="pot-size" type="number" value="3">
+      <input id="pot-size" type="number" value="2">
     </div>
 
     <div class="form-field">
       <label for="watering-method">Kastelutapa</label>
       <select id="watering-method">
-        <option selected>Anna maan kuivua</option>
-        <option>Anna pintamullan kuivua</option>
+        <option>Anna maan kuivua</option>
+        <option selected>Anna pintamullan kuivua</option>
         <option>Pidä maa kosteana</option>
         <option>Kastele runsaasti ja anna kuivua</option>
         <option>Pohjakastelu</option>
@@ -50,6 +50,6 @@
       Lopullinen kastelutiheys määräytyy näiden ohjeiden ja kasvista kerätyn sensoridatan perusteella.
     </p>
 
-    <button class="btn btn--primary" data-nav="flow2-connect-sensor" style="width: 100%;">Lisää kasvi</button>
+    <button class="btn btn--primary" data-nav="flow2-connect-sensor-2" style="width: 100%;">Lisää kasvi</button>
   </form>
 </main>

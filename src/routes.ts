@@ -47,11 +47,7 @@ export const routes = {
     title: "Kotitalous",
     screen: "flow2-household.html",
   },
-  "flow2-add-plant-method": {
-    title: "Lisää kasvi",
-    screen: "flow2-add-plant-method.html",
-  },
-  "flow2-camera": {
+"flow2-camera": {
     title: "Kamera",
     screen: "flow2-camera.html",
   },
@@ -59,8 +55,36 @@ export const routes = {
     title: "Kasvin tiedot",
     screen: "flow2-add-plant-form.html",
   },
+  "flow2-camera-2": {
+    title: "Kamera",
+    screen: "flow2-camera-2.html",
+  },
+  "flow2-add-plant-form-2": {
+    title: "Kasvin tiedot",
+    screen: "flow2-add-plant-form-2.html",
+  },
+  "flow2-connect-sensor": {
+    title: "Yhdistä sensori",
+    screen: "flow2-connect-sensor.html",
+  },
+  "flow2-sensor-connected": {
+    title: "Sensori yhdistetty",
+    screen: "flow2-sensor-connected.html",
+  },
   "flow2-plant-added": {
     title: "Kotitalous",
     screen: "flow2-plant-added.html",
+  },
+  "flow2-connect-sensor-2": {
+    title: "Yhdistä sensori",
+    screen: "flow2-connect-sensor-2.html",
+  },
+  "flow2-sensor-connected-2": {
+    title: "Sensori yhdistetty",
+    screen: "flow2-sensor-connected-2.html",
+  },
+  "flow2-plant-added-2": {
+    title: "Kotitalous",
+    screen: "flow2-plant-added-2.html",
   },
 } as const;

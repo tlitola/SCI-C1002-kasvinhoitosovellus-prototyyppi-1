@@ -431,6 +431,7 @@ body {
   border-radius: 8px;
   padding: 0.5rem 0.75rem;
   margin-top: 0.25rem;
+  overflow: hidden;
 }
 
 .share-url-text {
@@ -440,8 +441,12 @@ body {
   color: #1a6dcc;
   text-decoration: none;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.share-url-text::-webkit-scrollbar {
+  display: none;
 }
 
 .share-url-text:hover {

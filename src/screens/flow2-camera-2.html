@@ -1,0 +1,21 @@
+<main class="screen">
+  <button class="back-link" data-back>← Takaisin</button>
+  <h1 style="margin-bottom: 1.25rem;">Kuvaa kasvi</h1>
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 1.25rem;">
+    <video id="camera-video" class="camera-viewfinder" autoplay playsinline muted></video>
+    <img id="capture-preview" class="camera-viewfinder" hidden style="object-fit: cover;">
+    <canvas id="capture-canvas" hidden></canvas>
+
+    <p id="camera-error" style="color: #c62828; font-size: 0.9rem; display: none;">
+      Kameraan ei saatu yhteyttä. Tarkista selaimesi luvat.
+    </p>
+
+    <p style="font-size: 0.82rem; color: #666; text-align: center; line-height: 1.4;">
+      Kuvaa käytetään kasvin tunnistamiseen, jonka pohjalta kasville laaditaan hoito-ohjeet, joita voit muokata ennen tallentamista.
+    </p>
+
+    <button id="capture-btn" class="btn btn--primary" style="width: 100%;">Ota kuva</button>
+    <button id="continue-btn" class="btn btn--primary" data-nav="flow2-add-plant-form-2" style="width: 100%;" hidden>Jatka →</button>
+  </div>
+</main>
