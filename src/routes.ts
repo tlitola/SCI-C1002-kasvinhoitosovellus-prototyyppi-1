@@ -39,6 +39,38 @@ export const routes = {
     title: "Kasvi – Kunnossa",
     screen: "flow1-plant-healthy-baker-street.html",
   },
+  "flow1-household-peikonlehti-watered": {
+    title: "Dipoli",
+    screen: "flow1-household-peikonlehti-watered.html",
+  },
+  "flow1-household-vehka-watered": {
+    title: "Dipoli",
+    screen: "flow1-household-vehka-watered.html",
+  },
+  "flow1-plant-needs-watering-2": {
+    title: "Kasvi – Kastelu tarpeen",
+    screen: "flow1-plant-needs-watering-2.html",
+  },
+  "flow1-plant-watered-2": {
+    title: "Kasvi – Kasteltu",
+    screen: "flow1-plant-watered-2.html",
+  },
+  "flow1-plant-needs-watering-vehka-2": {
+    title: "Kasvi – Kastelu tarpeen",
+    screen: "flow1-plant-needs-watering-vehka-2.html",
+  },
+  "flow1-plant-watered-vehka-2": {
+    title: "Kasvi – Kasteltu",
+    screen: "flow1-plant-watered-vehka-2.html",
+  },
+  "flow1-plant-needs-watering-vehka": {
+    title: "Kasvi – Kastelu tarpeen",
+    screen: "flow1-plant-needs-watering-vehka.html",
+  },
+  "flow1-plant-watered-vehka": {
+    title: "Kasvi – Kasteltu",
+    screen: "flow1-plant-watered-vehka.html",
+  },
   "flow1-plant-healthy-vehka": {
     title: "Kasvi – Kunnossa",
     screen: "flow1-plant-healthy-vehka.html",
