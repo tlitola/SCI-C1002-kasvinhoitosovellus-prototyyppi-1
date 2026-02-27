@@ -81,7 +81,8 @@ function bindCamera(container: HTMLElement, video: HTMLVideoElement) {
     })
     .catch(() => {
       if (errorMsg) errorMsg.style.display = "block";
-      if (captureBtn) captureBtn.disabled = true;
+      if (captureBtn) captureBtn.hidden = true;
+      if (continueBtn) continueBtn.hidden = false;
     });
 
   captureBtn?.addEventListener("click", () => {
