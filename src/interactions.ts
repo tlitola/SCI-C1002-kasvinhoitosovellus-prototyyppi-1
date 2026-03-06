@@ -43,6 +43,12 @@ export function bindInteractions(container: HTMLElement): void {
     });
   });
 
+  // Populate any plant photos from captured images
+  container.querySelectorAll<HTMLImageElement>("img[data-photo-key]").forEach((img) => {
+    const captured = sessionStorage.getItem(img.dataset.photoKey!);
+    if (captured) img.src = captured;
+  });
+
   // Camera screen
   const video = container.querySelector<HTMLVideoElement>("#camera-video");
   if (video) {
@@ -93,7 +99,8 @@ function bindCamera(container: HTMLElement, video: HTMLVideoElement) {
     canvas.getContext("2d")?.drawImage(video, 0, 0);
 
     const dataUrl = canvas.toDataURL("image/jpeg");
-    sessionStorage.setItem("capturedPlantImage", dataUrl);
+    const photoKey = captureBtn.dataset.photoKey ?? "plantImage1";
+    sessionStorage.setItem(photoKey, dataUrl);
 
     stopActiveStream();
     video.hidden = true;
