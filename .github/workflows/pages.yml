@@ -21,6 +21,8 @@ jobs:
       - run: npm run build
         env:
           VITE_PASTEBIN_API_KEY: ${{ secrets.VITE_PASTEBIN_API_KEY }}
+          VITE_PASTEBIN_USERNAME: ${{ secrets.VITE_PASTEBIN_USERNAME }}
+          VITE_PASTEBIN_PASSWORD: ${{ secrets.VITE_PASTEBIN_PASSWORD }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

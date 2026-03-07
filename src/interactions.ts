@@ -87,6 +87,31 @@ export function bindInteractions(container: HTMLElement): void {
   }
 }
 
+const CORS_PROXY = "https://corsproxy.io/?url=";
+let cachedUserKey: string | null = null;
+
+async function getPastebinUserKey(): Promise<string | null> {
+  if (cachedUserKey) return cachedUserKey;
+
+  const username = import.meta.env.VITE_PASTEBIN_USERNAME;
+  const password = import.meta.env.VITE_PASTEBIN_PASSWORD;
+  const apiKey = import.meta.env.VITE_PASTEBIN_API_KEY;
+  if (!username || !password) return null;
+
+  const body = new URLSearchParams({ api_dev_key: apiKey, api_user_name: username, api_user_password: password });
+  const loginUrl = "https://pastebin.com/api/api_login.php";
+  const resp = await fetch(`${CORS_PROXY}${encodeURIComponent(loginUrl)}`, { method: "POST", body });
+  const text = await resp.text();
+
+  if (text.startsWith("Bad API request")) {
+    console.error("Pastebin login failed:", text);
+    return null;
+  }
+
+  cachedUserKey = text;
+  return cachedUserKey;
+}
+
 function submitToPastebin(form: HTMLFormElement): void {
   const apiKey = import.meta.env.VITE_PASTEBIN_API_KEY;
   if (!apiKey) return;
@@ -109,16 +134,21 @@ function submitToPastebin(form: HTMLFormElement): void {
     values.map((v) => `"${v.replace(/"/g, '""')}"`).join(","),
   ].join("\n");
 
-  const body = new URLSearchParams({
-    api_dev_key: apiKey,
-    api_option: "paste",
-    api_paste_code: csv,
-    api_paste_name: `SCI-C1002-17 Plant: ${val("plant-name")}`,
-    api_paste_format: "text",
-  });
-
+  const pasteName = `SCI-C1002-17 Plant: ${val("plant-name")}`;
   const pastebinUrl = "https://pastebin.com/api/api_post.php";
-  fetch(`https://corsproxy.io/?url=${encodeURIComponent(pastebinUrl)}`, { method: "POST", body })
+
+  getPastebinUserKey().then((userKey) => {
+    const body = new URLSearchParams({
+      api_dev_key: apiKey,
+      api_option: "paste",
+      api_paste_code: csv,
+      api_paste_name: pasteName,
+      api_paste_format: "text",
+      ...(userKey ? { api_user_key: userKey } : {}),
+    });
+
+    return fetch(`${CORS_PROXY}${encodeURIComponent(pastebinUrl)}`, { method: "POST", body });
+  })
     .then((r) => r.text())
     .then((url) => console.log("Pastebin paste created:", url))
     .catch((err) => console.error("Pastebin submission failed:", err));
