@@ -95,6 +95,10 @@ export const routes = {
     title: "Kasvin tiedot",
     screen: "flow2-add-plant-form-2.html",
   },
+  "flow2-insert-sensor": {
+    title: "Aseta sensori",
+    screen: "flow2-insert-sensor.html",
+  },
   "flow2-connect-sensor": {
     title: "Yhdistä sensori",
     screen: "flow2-connect-sensor.html",
@@ -106,6 +110,10 @@ export const routes = {
   "flow2-plant-added": {
     title: "Kotitalous",
     screen: "flow2-plant-added.html",
+  },
+  "flow2-insert-sensor-2": {
+    title: "Aseta sensori",
+    screen: "flow2-insert-sensor-2.html",
   },
   "flow2-connect-sensor-2": {
     title: "Yhdistä sensori",

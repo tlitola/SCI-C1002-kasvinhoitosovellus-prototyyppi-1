@@ -11,8 +11,16 @@ function stopActiveStream() {
   activeStream = null;
 }
 
+// Cancel any pending screen callbacks (e.g. NFC scan timeouts) when navigating away
+const pendingTimeouts: ReturnType<typeof setTimeout>[] = [];
+
+function clearPendingTimeouts() {
+  while (pendingTimeouts.length) clearTimeout(pendingTimeouts.pop());
+}
+
 export function bindInteractions(container: HTMLElement): void {
   stopActiveStream();
+  clearPendingTimeouts();
 
   // data-nav: push current route onto stack, then navigate forward
   container.querySelectorAll<HTMLElement>("[data-nav]").forEach((el) => {
@@ -64,6 +72,12 @@ export function bindInteractions(container: HTMLElement): void {
     if (name) el.textContent = name;
   });
 
+  // NFC sensor connect screen
+  const nfcConnect = container.querySelector<HTMLElement>("#nfc-connect");
+  if (nfcConnect) {
+    bindNfcConnect(container, nfcConnect);
+  }
+
   // Camera screen
   const video = container.querySelector<HTMLVideoElement>("#camera-video");
   if (video) {
@@ -85,6 +99,37 @@ export function bindInteractions(container: HTMLElement): void {
       });
     });
   }
+}
+
+function bindNfcConnect(container: HTMLElement, nfcConnect: HTMLElement): void {
+  const dest = nfcConnect.dataset.sensorNav!;
+  const sensorId = nfcConnect.dataset.sensorId!;
+  const status = container.querySelector<HTMLElement>("#nfc-status");
+  const sensorList = container.querySelector<HTMLElement>("#sensor-list");
+
+  pendingTimeouts.push(
+    setTimeout(() => {
+      if (status) status.textContent = "1 sensori löydetty";
+
+      if (sensorList) {
+        const item = document.createElement("li");
+        item.style.cssText = "display: flex; justify-content: space-between; align-items: center; padding: 0.875rem 1rem; background: #fff; border: 1px solid #ddd; border-radius: 8px;";
+        item.innerHTML = `
+          <div>
+            <p style="font-weight: 600; margin: 0 0 0.2rem;">${sensorId}</p>
+            <p style="font-size: 0.8rem; color: #555; margin: 0;">NFC · Vahva signaali</p>
+          </div>
+          <button class="btn btn--primary" style="padding: 0.4rem 1rem; font-size: 0.875rem;">Valitse</button>
+        `;
+        item.querySelector("button")!.addEventListener("click", () => {
+          const current = window.location.hash.replace(/^#!\/?/, "");
+          if (current) backStack.push(current);
+          page.show(`/${dest}`);
+        });
+        sensorList.appendChild(item);
+      }
+    }, 3000),
+  );
 }
 
 const CORS_PROXY = "https://corsproxy.io/?url=";

@@ -1,23 +1,18 @@
 <main class="screen">
   <button class="back-link" data-back>← Takaisin</button>
+  <h1 style="margin-bottom: 0.25rem;">Yhdistä sensori</h1>
+  <p style="color: #888; font-size: 0.9rem; margin-bottom: 2rem;">Pidä puhelinta sensorin NFC-tagin lähellä.</p>
 
-  <h1 style="text-align: center; margin-bottom: 1.5rem;">Yhdistä sensori</h1>
-
-  <div style="text-align: center; margin-bottom: 1.5rem;">
-    <img src="/images/nfc.png" alt="NFC" style="width: 120px; height: 120px;">
+  <div id="nfc-connect" data-sensor-nav="flow2-sensor-connected" data-sensor-id="GS-4821" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+    <div style="position: relative; width: 80px; height: 80px;">
+      <span style="position: absolute; inset: 0; border-radius: 50%; border: 5px solid #e0e0e0; border-top-color: #2e7d32; animation: spin 0.9s linear infinite;"></span>
+    </div>
+    <p id="nfc-status" style="font-size: 0.9rem; color: #666; text-align: center; margin: 0;">Etsitään sensoria...</p>
   </div>
 
-  <p style="text-align: center; font-size: 1rem; margin-bottom: 0.75rem;">
-    Skannaa kasvin anturin NFC-tagi puhelimellasi liittääksesi sen sovellukseen.
-  </p>
+  <ul id="sensor-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;"></ul>
 
-  <p style="text-align: center; font-size: 0.85rem; color: #666; margin-bottom: 0.75rem;">
-    Pidä puhelinta anturin lähellä, kunnes yhteys muodostuu.
-  </p>
-
-  <p style="text-align: center; font-size: 0.85rem; color: #666;">
-    Aseta anturi multaan kasvin keskelle, lähelle juuria, noin 5–8 cm syvyyteen.
-  </p>
-
-  <button class="btn btn--primary" data-nav="flow2-sensor-connected" style="width: 100%; margin-top: 2rem;">Skannaa sensori</button>
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
 </main>
