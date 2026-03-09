@@ -129,6 +129,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
@@ -303,8 +304,10 @@ body {
 }
 
 .banner--watering {
-  background: rgba(222, 237, 255, 0.8);
-  color: #37474f;
+  background: rgba(222, 237, 255, 0.9);
+  color: #1a2e40;
+  font-size: 1.1rem;
+  border-left: 4px solid #1565c0;
 }
 
 .separator {
