@@ -305,6 +305,11 @@ body {
   color: #1e7e34;
 }
 
+.banner--warning {
+  background: #fff3cd;
+  color: #7d4e00;
+}
+
 .banner--watering {
   background: rgba(222, 237, 255, 0.9);
   color: #1a2e40;

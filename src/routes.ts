@@ -43,6 +43,50 @@ export const routes = {
     title: "Kasvi – Kunnossa",
     screen: "flow1-agave-detail.html",
   },
+  "flow3-select-household": {
+    title: "Valitse talous",
+    screen: "flow3-select-household.html",
+  },
+  "flow3-select-household-all-watered": {
+    title: "Valitse talous",
+    screen: "flow3-select-household-all-watered.html",
+  },
+  "flow3-dipoli-attention": {
+    title: "Dipoli",
+    screen: "flow3-dipoli-attention.html",
+  },
+  "flow3-dipoli-all-watered": {
+    title: "Dipoli",
+    screen: "flow3-dipoli-all-watered.html",
+  },
+  "flow3-baker-street": {
+    title: "221B Baker Street",
+    screen: "flow3-baker-street.html",
+  },
+  "flow3-vehka-battery-warning": {
+    title: "Sensorin akku",
+    screen: "flow3-vehka-battery-warning.html",
+  },
+  "flow3-vehka-needs-watering": {
+    title: "Kasvi – Kastelu tarpeen",
+    screen: "flow3-vehka-needs-watering.html",
+  },
+  "flow3-vehka-watered-confirmation": {
+    title: "Kasvi – Kasteltu",
+    screen: "flow3-vehka-watered-confirmation.html",
+  },
+  "flow3-agave-detail": {
+    title: "Kasvi – Kastelu tarpeen",
+    screen: "flow3-agave-detail.html",
+  },
+  "flow3-peikonlehti-detail": {
+    title: "Kasvi – Kunnossa",
+    screen: "flow3-peikonlehti-detail.html",
+  },
+  "flow3-mehikasvi-detail": {
+    title: "Kasvi – Kunnossa",
+    screen: "flow3-mehikasvi-detail.html",
+  },
   "flow2-household": {
     title: "Kotitalous",
     screen: "flow2-household.html",
