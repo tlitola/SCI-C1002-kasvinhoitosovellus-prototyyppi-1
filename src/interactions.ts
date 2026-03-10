@@ -27,6 +27,10 @@ export function bindInteractions(container: HTMLElement): void {
     el.addEventListener("click", () => {
       // Save form data if this button is inside a form with data-form-key
       const form = el.closest<HTMLFormElement>("form[data-form-key]");
+      if (form && !form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
       if (form) {
         const key = form.dataset.formKey!;
         const name = form.querySelector<HTMLInputElement>("#plant-name")?.value ?? "";

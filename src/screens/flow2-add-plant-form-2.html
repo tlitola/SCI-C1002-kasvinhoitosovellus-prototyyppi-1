@@ -7,37 +7,32 @@
   <form class="plant-form" data-form-key="2" onsubmit="return false;">
     <div class="form-field">
       <label for="plant-name">Kasvin nimi</label>
-      <input id="plant-name" type="text">
+      <input id="plant-name" type="text" required minlength="2">
     </div>
 
     <div class="form-field">
       <label for="watering-freq">Arvioitu kastelutiheys (päiviä)</label>
-      <input id="watering-freq" type="number">
+      <input id="watering-freq" type="number" required min="1" max="365">
     </div>
 
     <div class="form-field">
       <label for="watering-amount">Arvioitu kastelumäärä (dl)</label>
-      <input id="watering-amount" type="number">
+      <input id="watering-amount" type="number" required min="0.1" step="0.1">
     </div>
 
     <div class="form-field">
       <label for="last-watered">Viimeksi kasteltu</label>
-      <input id="last-watered" type="date">
-    </div>
-
-    <div class="form-field">
-      <label for="notes">Muistiinpanot</label>
-      <input id="notes" type="text">
+      <input id="last-watered" type="date" required>
     </div>
 
     <div class="form-field">
       <label for="plant-size">Kasvin koko (cm)</label>
-      <input id="plant-size" type="number">
+      <input id="plant-size" type="number" required min="1">
     </div>
 
     <div class="form-field">
       <label for="pot-size">Ruukun koko (l)</label>
-      <input id="pot-size" type="number">
+      <input id="pot-size" type="number" required min="0.1" step="0.1">
     </div>
 
     <div class="form-field">
@@ -49,6 +44,11 @@
         <option>Kastele runsaasti ja anna kuivua</option>
         <option>Pohjakastelu</option>
       </select>
+    </div>
+
+    <div class="form-field">
+      <label for="notes">Muistiinpanot</label>
+      <textarea id="notes" rows="5"></textarea>
     </div>
 
     <p style="font-size: 0.85rem; color: #666; font-style: italic;">
