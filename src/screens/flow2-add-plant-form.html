@@ -7,38 +7,43 @@
   <form class="plant-form" data-form-key="1" onsubmit="return false;">
     <div class="form-field">
       <label for="plant-name">Kasvin nimi</label>
-      <input id="plant-name" type="text" value="Peikonlehti">
+      <input id="plant-name" type="text">
     </div>
 
     <div class="form-field">
       <label for="watering-freq">Arvioitu kastelutiheys (päiviä)</label>
-      <input id="watering-freq" type="number" value="7">
+      <input id="watering-freq" type="number">
     </div>
 
     <div class="form-field">
       <label for="watering-amount">Arvioitu kastelumäärä (dl)</label>
-      <input id="watering-amount" type="number" value="2">
+      <input id="watering-amount" type="number">
+    </div>
+
+    <div class="form-field">
+      <label for="last-watered">Viimeksi kasteltu</label>
+      <input id="last-watered" type="date">
     </div>
 
     <div class="form-field">
       <label for="notes">Muistiinpanot</label>
-      <input id="notes" type="text" value="Viihtyy epäsuorassa valossa">
+      <input id="notes" type="text">
     </div>
 
     <div class="form-field">
       <label for="plant-size">Kasvin koko (cm)</label>
-      <input id="plant-size" type="number" value="45">
+      <input id="plant-size" type="number">
     </div>
 
     <div class="form-field">
       <label for="pot-size">Ruukun koko (l)</label>
-      <input id="pot-size" type="number" value="3">
+      <input id="pot-size" type="number">
     </div>
 
     <div class="form-field">
       <label for="watering-method">Kastelutapa</label>
       <select id="watering-method">
-        <option selected>Anna maan kuivua</option>
+        <option>Anna maan kuivua</option>
         <option>Anna pintamullan kuivua</option>
         <option>Pidä maa kosteana</option>
         <option>Kastele runsaasti ja anna kuivua</option>

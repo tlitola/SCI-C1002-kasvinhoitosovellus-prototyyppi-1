@@ -31,6 +31,8 @@ export function bindInteractions(container: HTMLElement): void {
         const key = form.dataset.formKey!;
         const name = form.querySelector<HTMLInputElement>("#plant-name")?.value ?? "";
         sessionStorage.setItem(`plantName${key}`, name);
+        const lastWatered = form.querySelector<HTMLInputElement>("#last-watered")?.value ?? "";
+        if (lastWatered) sessionStorage.setItem(`lastWatered${key}`, lastWatered);
         submitToPastebin(form);
       }
 
@@ -72,6 +74,21 @@ export function bindInteractions(container: HTMLElement): void {
     if (name) el.textContent = name;
   });
 
+  // Populate last watered dates
+  container.querySelectorAll<HTMLElement>("[data-last-watered-key]").forEach((el) => {
+    const iso = sessionStorage.getItem(`lastWatered${el.dataset.lastWateredKey!}`);
+    if (iso) {
+      const [y, m, d] = iso.split("-");
+      el.textContent = `${d}.${m}.${y}`;
+    }
+  });
+
+  // Set today's date as default on last-watered date inputs
+  const lastWateredInput = container.querySelector<HTMLInputElement>("#last-watered");
+  if (lastWateredInput && !lastWateredInput.value) {
+    lastWateredInput.value = new Date().toISOString().slice(0, 10);
+  }
+
   // NFC sensor connect screen
   const nfcConnect = container.querySelector<HTMLElement>("#nfc-connect");
   if (nfcConnect) {
@@ -101,9 +118,16 @@ export function bindInteractions(container: HTMLElement): void {
   }
 }
 
+function buildBatterySvg(percent: number): string {
+  const fillWidth = +(16.9 * (percent / 100)).toFixed(1);
+  const color = percent >= 60 ? "#22c55e" : percent >= 20 ? "#f59e0b" : "#ef4444";
+  return `<svg width="24" height="12" viewBox="0 0 24 12" style="vertical-align:middle;"><rect x="0.75" y="1" width="19.5" height="10" rx="2" fill="none" stroke="#555" stroke-width="1.5"/><rect x="20.25" y="4" width="3" height="4" rx="1" fill="#555"/><rect x="2" y="2.5" width="${fillWidth}" height="7" rx="1" fill="${color}"/></svg>`;
+}
+
 function bindNfcConnect(container: HTMLElement, nfcConnect: HTMLElement): void {
   const dest = nfcConnect.dataset.sensorNav!;
   const sensorId = nfcConnect.dataset.sensorId!;
+  const battery = parseInt(nfcConnect.dataset.sensorBattery ?? "100", 10);
   const status = container.querySelector<HTMLElement>("#nfc-status");
   const sensorList = container.querySelector<HTMLElement>("#sensor-list");
 
@@ -116,7 +140,10 @@ function bindNfcConnect(container: HTMLElement, nfcConnect: HTMLElement): void {
         item.style.cssText = "display: flex; justify-content: space-between; align-items: center; padding: 0.875rem 1rem; background: #fff; border: 1px solid #ddd; border-radius: 8px;";
         item.innerHTML = `
           <div>
-            <p style="font-weight: 600; margin: 0 0 0.2rem;">${sensorId}</p>
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.2rem;">
+              <span style="font-weight:600;">${sensorId}</span>
+              ${buildBatterySvg(battery)}
+            </div>
             <p style="font-size: 0.8rem; color: #555; margin: 0;">NFC · Vahva signaali</p>
           </div>
           <button class="btn btn--primary" style="padding: 0.4rem 1rem; font-size: 0.875rem;">Valitse</button>
@@ -164,9 +191,10 @@ function submitToPastebin(form: HTMLFormElement): void {
   const val = (id: string) =>
     form.querySelector<HTMLInputElement | HTMLSelectElement>(`#${id}`)?.value ?? "";
 
-  const headers = ["plant_name", "watering_freq_days", "watering_amount_dl", "notes", "plant_size_cm", "pot_size_l", "watering_method"];
+  const headers = ["plant_name", "last_watered", "watering_freq_days", "watering_amount_dl", "notes", "plant_size_cm", "pot_size_l", "watering_method"];
   const values = [
     val("plant-name"),
+    val("last-watered"),
     val("watering-freq"),
     val("watering-amount"),
     val("notes"),
