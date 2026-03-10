@@ -7,73 +7,41 @@ export const routes = {
     title: "Valitse talous",
     screen: "flow1-select-household.html",
   },
-  "flow1-select-household-happy": {
+  "flow1-select-household-all-watered": {
     title: "Valitse talous",
-    screen: "flow1-select-household-happy.html",
+    screen: "flow1-select-household-all-watered.html",
   },
-  "flow1-household-watered": {
+  "flow1-dipoli-all-watered": {
     title: "Dipoli",
-    screen: "flow1-household-watered.html",
+    screen: "flow1-dipoli-all-watered.html",
   },
-  "flow1-household-attention": {
+  "flow1-dipoli-attention": {
     title: "Dipoli",
-    screen: "flow1-household-attention.html",
+    screen: "flow1-dipoli-attention.html",
   },
-  "flow1-household-happy": {
+  "flow1-baker-street": {
     title: "221B Baker Street",
-    screen: "flow1-household-happy.html",
+    screen: "flow1-baker-street.html",
   },
-  "flow1-plant-needs-watering": {
+  "flow1-vehka-needs-watering": {
     title: "Kasvi – Kastelu tarpeen",
-    screen: "flow1-plant-needs-watering.html",
+    screen: "flow1-vehka-needs-watering.html",
   },
-  "flow1-plant-watered": {
+  "flow1-vehka-watered-confirmation": {
     title: "Kasvi – Kasteltu",
-    screen: "flow1-plant-watered.html",
+    screen: "flow1-vehka-watered-confirmation.html",
   },
-  "flow1-plant-healthy": {
+  "flow1-peikonlehti-detail": {
     title: "Kasvi – Kunnossa",
-    screen: "flow1-plant-healthy.html",
+    screen: "flow1-peikonlehti-detail.html",
   },
-  "flow1-plant-healthy-baker-street": {
+  "flow1-mehikasvi-detail": {
     title: "Kasvi – Kunnossa",
-    screen: "flow1-plant-healthy-baker-street.html",
+    screen: "flow1-mehikasvi-detail.html",
   },
-  "flow1-household-peikonlehti-watered": {
-    title: "Dipoli",
-    screen: "flow1-household-peikonlehti-watered.html",
-  },
-  "flow1-household-vehka-watered": {
-    title: "Dipoli",
-    screen: "flow1-household-vehka-watered.html",
-  },
-  "flow1-plant-needs-watering-2": {
-    title: "Kasvi – Kastelu tarpeen",
-    screen: "flow1-plant-needs-watering-2.html",
-  },
-  "flow1-plant-watered-2": {
-    title: "Kasvi – Kasteltu",
-    screen: "flow1-plant-watered-2.html",
-  },
-  "flow1-plant-needs-watering-vehka-2": {
-    title: "Kasvi – Kastelu tarpeen",
-    screen: "flow1-plant-needs-watering-vehka-2.html",
-  },
-  "flow1-plant-watered-vehka-2": {
-    title: "Kasvi – Kasteltu",
-    screen: "flow1-plant-watered-vehka-2.html",
-  },
-  "flow1-plant-needs-watering-vehka": {
-    title: "Kasvi – Kastelu tarpeen",
-    screen: "flow1-plant-needs-watering-vehka.html",
-  },
-  "flow1-plant-watered-vehka": {
-    title: "Kasvi – Kasteltu",
-    screen: "flow1-plant-watered-vehka.html",
-  },
-  "flow1-plant-healthy-vehka": {
+  "flow1-agave-detail": {
     title: "Kasvi – Kunnossa",
-    screen: "flow1-plant-healthy-vehka.html",
+    screen: "flow1-agave-detail.html",
   },
   "flow2-household": {
     title: "Kotitalous",
