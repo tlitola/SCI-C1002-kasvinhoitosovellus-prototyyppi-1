@@ -23,21 +23,21 @@ export const routes = {
     title: "221B Baker Street",
     screen: "flow1-baker-street.html",
   },
-  "flow1-vehka-needs-watering": {
+  "flow1-peikonlehti-needs-watering": {
     title: "Kasvi – Kastelu tarpeen",
-    screen: "flow1-vehka-needs-watering.html",
+    screen: "flow1-peikonlehti-needs-watering.html",
   },
-  "flow1-vehka-watered-confirmation": {
+  "flow1-peikonlehti-watered-confirmation": {
     title: "Kasvi – Kasteltu",
-    screen: "flow1-vehka-watered-confirmation.html",
+    screen: "flow1-peikonlehti-watered-confirmation.html",
   },
-  "flow1-peikonlehti-detail": {
+  "flow1-ronsylilja-detail": {
     title: "Kasvi – Kunnossa",
-    screen: "flow1-peikonlehti-detail.html",
+    screen: "flow1-ronsylilja-detail.html",
   },
-  "flow1-mehikasvi-detail": {
+  "flow1-malakanlaikkuvehka-detail": {
     title: "Kasvi – Kunnossa",
-    screen: "flow1-mehikasvi-detail.html",
+    screen: "flow1-malakanlaikkuvehka-detail.html",
   },
   "flow1-agave-detail": {
     title: "Kasvi – Kunnossa",
@@ -63,29 +63,29 @@ export const routes = {
     title: "221B Baker Street",
     screen: "flow3-baker-street.html",
   },
-  "flow3-vehka-battery-warning": {
+  "flow3-peikonlehti-battery-warning": {
     title: "Sensorin akku",
-    screen: "flow3-vehka-battery-warning.html",
+    screen: "flow3-peikonlehti-battery-warning.html",
   },
-  "flow3-vehka-needs-watering": {
+  "flow3-peikonlehti-needs-watering": {
     title: "Kasvi – Kastelu tarpeen",
-    screen: "flow3-vehka-needs-watering.html",
+    screen: "flow3-peikonlehti-needs-watering.html",
   },
-  "flow3-vehka-watered-confirmation": {
+  "flow3-peikonlehti-watered-confirmation": {
     title: "Kasvi – Kasteltu",
-    screen: "flow3-vehka-watered-confirmation.html",
+    screen: "flow3-peikonlehti-watered-confirmation.html",
   },
   "flow3-agave-detail": {
     title: "Kasvi – Kastelu tarpeen",
     screen: "flow3-agave-detail.html",
   },
-  "flow3-peikonlehti-detail": {
+  "flow3-ronsylilja-detail": {
     title: "Kasvi – Kunnossa",
-    screen: "flow3-peikonlehti-detail.html",
+    screen: "flow3-ronsylilja-detail.html",
   },
-  "flow3-mehikasvi-detail": {
+  "flow3-malakanlaikkuvehka-detail": {
     title: "Kasvi – Kunnossa",
-    screen: "flow3-mehikasvi-detail.html",
+    screen: "flow3-malakanlaikkuvehka-detail.html",
   },
   "flow2-household": {
     title: "Kotitalous",
