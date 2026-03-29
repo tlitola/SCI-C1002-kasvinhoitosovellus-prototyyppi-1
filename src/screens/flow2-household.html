@@ -1,18 +1,7 @@
 <main class="screen">
   <div class="household-summary household-summary--ok">
-    <div class="household-summary__icon">🏡</div>
     <h1>Kotitalous</h1>
     <span class="badge badge--green">Omistaja</span>
-    <div class="household-summary__conditions">
-      <div class="household-summary__condition">
-        <span class="household-summary__condition-icon">🌡️</span>
-        <span>21 °C</span>
-      </div>
-      <div class="household-summary__condition">
-        <span class="household-summary__condition-icon">💧</span>
-        <span>48 %</span>
-      </div>
-    </div>
     <div class="household-summary__stats" style="margin-top: 0.75rem;">
       <div class="household-summary__stat">
         <span class="household-summary__value">0</span>
@@ -23,10 +12,33 @@
         <span class="household-summary__label">Vaatii huomiota</span>
       </div>
     </div>
+    <div class="household-summary__conditions">
+      <div class="household-summary__condition">
+        <span class="household-summary__condition-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span>
+        <span>21 °C</span>
+      </div>
+      <div class="household-summary__condition">
+        <span class="household-summary__condition-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
+        <span>48 %</span>
+      </div>
+    </div>
   </div>
 
   <h2 class="section-title">Kasvit</h2>
-  <p style="color: #888; font-size: 0.9rem; text-align: center; margin: 1rem 0 1.5rem;">Ei kasveja vielä. Lisää ensimmäinen kasvi!</p>
+  <p class="screen__subtitle" style="text-align: center; margin: 1rem 0 1.5rem;">Ei kasveja vielä. Lisää ensimmäinen kasvi!</p>
 
   <button class="btn btn--primary" data-nav="flow2-camera" style="width: 100%; margin-top: 0.5rem;">+ Lisää kasvi</button>
+
+  <div class="share-section" style="margin-top: auto;">
+    <p class="share-section__heading">🔗 Jaa kotitalous kaverille</p>
+    <p class="share-section__desc">Lähetä linkki kaverillesi – hän pääsee suoraan sovellukseen.</p>
+    <div class="share-url-row">
+      <a class="share-url-text" href="https://tlitola.github.io/SCI-C1002-kasvinhoitosovellus-prototyyppi-1/#!/flow1-select-household?invite=b4e2f8a1c3d9e7f2a5b8c1d4e6f3a9c0" target="_blank" rel="noopener">
+        https://tlitola.github.io/SCI-C1002-kasvinhoitosovellus-prototyyppi-1/#!/flow1-select-household?invite=b4e2f8a1c3d9e7f2a5b8c1d4e6f3a9c0
+      </a>
+      <button id="copy-link-btn" class="share-copy-btn" data-url="https://tlitola.github.io/SCI-C1002-kasvinhoitosovellus-prototyyppi-1/#!/flow1-select-household?invite=b4e2f8a1c3d9e7f2a5b8c1d4e6f3a9c0">
+        Kopioi
+      </button>
+    </div>
+  </div>
 </main>

@@ -35,6 +35,34 @@ export const routes = {
     title: "Kasvi – Kunnossa",
     screen: "flow1-ronsylilja-detail.html",
   },
+  "flow1-ronsylilja-watered-confirmation": {
+    title: "Kasvi – Kasteltu",
+    screen: "flow1-ronsylilja-watered-confirmation.html",
+  },
+  "flow1-ronsylilja-detail-v2": {
+    title: "Kasvi – Kunnossa",
+    screen: "flow1-ronsylilja-detail-v2.html",
+  },
+  "flow1-ronsylilja-watered-confirmation-v2": {
+    title: "Kasvi – Kasteltu",
+    screen: "flow1-ronsylilja-watered-confirmation-v2.html",
+  },
+  "flow1-dipoli-uurremuori-only-watered": {
+    title: "Kaverin kämppä",
+    screen: "flow1-dipoli-uurremuori-only-watered.html",
+  },
+  "flow1-peikonlehti-needs-watering-v2": {
+    title: "Kasvi – Kastelu tarpeen",
+    screen: "flow1-peikonlehti-needs-watering-v2.html",
+  },
+  "flow1-peikonlehti-watered-confirmation-v2": {
+    title: "Kasvi – Kasteltu",
+    screen: "flow1-peikonlehti-watered-confirmation-v2.html",
+  },
+  "flow1-dipoli-uurremuori-watered": {
+    title: "Kaverin kämppä",
+    screen: "flow1-dipoli-uurremuori-watered.html",
+  },
   "flow1-malakanlaikkuvehka-detail": {
     title: "Kasvi – Kunnossa",
     screen: "flow1-malakanlaikkuvehka-detail.html",

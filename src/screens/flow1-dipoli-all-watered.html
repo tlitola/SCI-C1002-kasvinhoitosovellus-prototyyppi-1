@@ -1,12 +1,9 @@
-<main class="screen">
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
-    <button class="back-link" style="margin-bottom:0;" data-nav="flow1-select-household-all-watered">← Takaisin</button>
-    <button style="font-size:0.8rem;padding:0.3rem 0.75rem;border:1px solid #ccc;border-radius:6px;background:#fff;color:#444;cursor:pointer;" data-nav="flow3-select-household">Seuraava käynti →</button>
-  </div>
+<main class="screen screen--ok">
+  <button class="back-link" data-nav="flow1-select-household-all-watered"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Takaisin</button>
 
   <section class="household-summary household-summary--ok">
-    <div class="household-summary__icon">🏠</div>
-    <h1>Dipoli</h1>
+    <h1>Kaverin kämppä</h1>
+    <div class="household-summary__location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Otaniemi, Espoo</span></div>
     <div class="household-summary__stats">
       <div class="household-summary__stat">
         <span class="household-summary__value">3</span>
@@ -19,45 +16,55 @@
     </div>
     <div class="household-summary__conditions">
       <div class="household-summary__condition">
-        <span class="household-summary__condition-icon">🌡️</span>
+        <span class="household-summary__condition-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span>
         <span>22 °C</span>
       </div>
       <div class="household-summary__condition">
-        <span class="household-summary__condition-icon">💧</span>
+        <span class="household-summary__condition-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
         <span>45 %</span>
       </div>
-    </div>
-    <div class="household-summary__next">
-      <span class="household-summary__next-label">Seuraava kastelu</span>
-      <span class="badge badge--green">4 pv päästä</span>
     </div>
   </section>
 
   <h2 class="section-title">Kasvit</h2>
   <ul class="plant-list">
     <li class="plant-list__item" data-nav="flow1-peikonlehti-watered-confirmation">
-      <img class="plant-list__img" src="/images/soikkovehka.webp" alt="Soikkovehka">
+      <img class="plant-list__img" src="/images/kilpipiilea.webp" alt="Kilpipiileä">
       <div class="plant-list__info">
-        <span class="plant-list__name" style="display:inline-flex;align-items:center;">Soikkovehka <svg width="20" height="10" viewBox="0 0 24 12" style="vertical-align:middle;margin-left:0.75rem;"><rect x="0.75" y="1" width="19.5" height="10" rx="2" fill="none" stroke="#555" stroke-width="1.5"/><rect x="20.25" y="4" width="3" height="4" rx="1" fill="#555"/><rect x="2" y="2.5" width="7.6" height="7" rx="1" fill="#f59e0b"/></svg></span>
+        <span class="plant-list__name">Kilpipiileä</span>
+        <span class="plant-list__sensor">Sensori <svg width="20" height="10" viewBox="0 0 24 12" style="vertical-align:middle;"><rect x="0.75" y="1" width="19.5" height="10" rx="2" fill="none" stroke="#555" stroke-width="1.5"/><rect x="20.25" y="4" width="3" height="4" rx="1" fill="#555"/><rect x="2" y="2.5" width="7.6" height="7" rx="1" fill="#f59e0b"/></svg></span>
         <span class="badge badge--green">Kunnossa</span>
       </div>
       <div class="plant-list__arrow">›</div>
     </li>
-    <li class="plant-list__item" data-nav="flow1-ronsylilja-detail">
+    <li class="plant-list__item" data-nav="flow1-ronsylilja-detail-v2">
       <img class="plant-list__img" src="/images/muorinkukka.webp" alt="Uurremuorinkukka">
       <div class="plant-list__info">
-        <span class="plant-list__name" style="display:inline-flex;align-items:center;">Uurremuorinkukka <svg width="20" height="10" viewBox="0 0 24 12" style="vertical-align:middle;margin-left:0.75rem;"><rect x="0.75" y="1" width="19.5" height="10" rx="2" fill="none" stroke="#555" stroke-width="1.5"/><rect x="20.25" y="4" width="3" height="4" rx="1" fill="#555"/><rect x="2" y="2.5" width="12.2" height="7" rx="1" fill="#22c55e"/></svg></span>
-        <span class="badge badge--green">Kunnossa</span>
+        <span class="plant-list__name">Uurremuorinkukka</span>
+        <span class="plant-list__sensor">Sensori <svg width="20" height="10" viewBox="0 0 24 12" style="vertical-align:middle;"><rect x="0.75" y="1" width="19.5" height="10" rx="2" fill="none" stroke="#555" stroke-width="1.5"/><rect x="20.25" y="4" width="3" height="4" rx="1" fill="#555"/><rect x="2" y="2.5" width="12.2" height="7" rx="1" fill="#22c55e"/></svg></span>
+        <span class="badge badge--green">Kastelu 2 pv päästä</span>
       </div>
       <div class="plant-list__arrow">›</div>
     </li>
     <li class="plant-list__item" data-nav="flow1-malakanlaikkuvehka-detail">
-      <img class="plant-list__img" src="/images/kilpipiilea.webp" alt="Kilpipiileä">
+      <img class="plant-list__img" src="/images/soikkovehka.webp" alt="Soikkovehka">
       <div class="plant-list__info">
-        <span class="plant-list__name" style="display:inline-flex;align-items:center;">Kilpipiileä <svg width="20" height="10" viewBox="0 0 24 12" style="vertical-align:middle;margin-left:0.75rem;"><rect x="0.75" y="1" width="19.5" height="10" rx="2" fill="none" stroke="#555" stroke-width="1.5"/><rect x="20.25" y="4" width="3" height="4" rx="1" fill="#555"/><rect x="2" y="2.5" width="15.4" height="7" rx="1" fill="#22c55e"/></svg></span>
+        <span class="plant-list__name">Soikkovehka</span>
+        <span class="plant-list__sensor">Sensori <svg width="20" height="10" viewBox="0 0 24 12" style="vertical-align:middle;"><rect x="0.75" y="1" width="19.5" height="10" rx="2" fill="none" stroke="#555" stroke-width="1.5"/><rect x="20.25" y="4" width="3" height="4" rx="1" fill="#555"/><rect x="2" y="2.5" width="15.4" height="7" rx="1" fill="#22c55e"/></svg></span>
         <span class="badge badge--green">Kunnossa</span>
       </div>
       <div class="plant-list__arrow">›</div>
     </li>
   </ul>
+  <div class="plant-list-footer">
+    <h3 class="plant-list-footer__title">Seuraava kastelu</h3>
+    <div class="plant-list-footer__row">
+      <span class="plant-list-footer__label">Suositeltu käynti</span>
+      <span class="plant-list-footer__value plant-list-footer__value--ok">2 pv päästä</span>
+    </div>
+    <div class="plant-list-footer__row">
+      <span class="plant-list-footer__label">Joustava käynti</span>
+      <span class="plant-list-footer__value plant-list-footer__value--ok">3 pv päästä · 2 kasvia</span>
+    </div>
+  </div>
 </main>

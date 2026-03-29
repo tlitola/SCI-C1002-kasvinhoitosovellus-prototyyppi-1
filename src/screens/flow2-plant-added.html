@@ -1,18 +1,7 @@
 <main class="screen">
   <div class="household-summary household-summary--ok">
-    <div class="household-summary__icon">🏡</div>
     <h1>Kotitalous</h1>
     <span class="badge badge--green">Omistaja</span>
-    <div class="household-summary__conditions">
-      <div class="household-summary__condition">
-        <span class="household-summary__condition-icon">🌡️</span>
-        <span>21 °C</span>
-      </div>
-      <div class="household-summary__condition">
-        <span class="household-summary__condition-icon">💧</span>
-        <span>48 %</span>
-      </div>
-    </div>
     <div class="household-summary__stats" style="margin-top: 0.75rem;">
       <div class="household-summary__stat">
         <span class="household-summary__value">1</span>
@@ -21,6 +10,16 @@
       <div class="household-summary__stat">
         <span class="household-summary__value">0</span>
         <span class="household-summary__label">Vaatii huomiota</span>
+      </div>
+    </div>
+    <div class="household-summary__conditions">
+      <div class="household-summary__condition">
+        <span class="household-summary__condition-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span>
+        <span>21 °C</span>
+      </div>
+      <div class="household-summary__condition">
+        <span class="household-summary__condition-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
+        <span>48 %</span>
       </div>
     </div>
   </div>
@@ -34,7 +33,7 @@
         <span class="badge badge--green">Kunnossa</span>
         <span class="plant-list__moisture">Maaperän kosteus: 48 % · Tavoite: 50 %</span>
         <span class="plant-list__moisture">Viimeksi kasteltu: <span data-last-watered-key="1">-</span></span>
-        <span class="plant-list__moisture" style="display:flex;align-items:center;gap:0.4rem;line-height:1;">Sensorin akku <svg width="24" height="12" viewBox="0 0 24 12" style="vertical-align:middle;"><rect x="0.75" y="1" width="19.5" height="10" rx="2" fill="none" stroke="#555" stroke-width="1.5"/><rect x="20.25" y="4" width="3" height="4" rx="1" fill="#555"/><rect x="2" y="2.5" width="12.2" height="7" rx="1" fill="#22c55e"/></svg></span>
+        <span class="plant-list__sensor">Sensori <svg width="20" height="10" viewBox="0 0 24 12" style="vertical-align:middle;"><rect x="0.75" y="1" width="19.5" height="10" rx="2" fill="none" stroke="#555" stroke-width="1.5"/><rect x="20.25" y="4" width="3" height="4" rx="1" fill="#555"/><rect x="2" y="2.5" width="12.2" height="7" rx="1" fill="#22c55e"/></svg></span>
       </div>
     </li>
   </ul>

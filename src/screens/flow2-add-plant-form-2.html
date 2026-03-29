@@ -1,23 +1,23 @@
-<main class="screen">
-  <button class="back-link" data-back>← Takaisin</button>
+<main class="screen screen--plain">
+  <button class="back-link" data-back><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Takaisin</button>
   <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1.25rem;">
-    <img id="plant-photo" data-photo-key="plantImage2" style="width: 180px; height: 180px; object-fit: cover;" src="/images/IMG_2831.webp" alt="Kasvi">
+    <img id="plant-photo" data-photo-key="plantImage2" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px;" src="/images/IMG_2831.webp" alt="Kasvi">
   </div>
 
   <form class="plant-form" data-form-key="2" onsubmit="return false;">
     <div class="form-field">
       <label for="plant-name">Kasvin nimi</label>
-      <input id="plant-name" type="text" required minlength="2">
+      <input id="plant-name" type="text" required minlength="2" value="Vehka">
     </div>
 
     <div class="form-field">
       <label for="watering-freq">Arvioitu kastelutiheys (päiviä)</label>
-      <input id="watering-freq" type="number" required min="1" max="365">
+      <input id="watering-freq" type="number" required min="1" max="365" value="10">
     </div>
 
     <div class="form-field">
       <label for="watering-amount">Arvioitu kastelumäärä (dl)</label>
-      <input id="watering-amount" type="number" required min="0.1" step="0.1">
+      <input id="watering-amount" type="number" required min="1" value="2">
     </div>
 
     <div class="form-field">
@@ -27,19 +27,19 @@
 
     <div class="form-field">
       <label for="plant-size">Kasvin koko (cm)</label>
-      <input id="plant-size" type="number" required min="1">
+      <input id="plant-size" type="number" required min="1" value="35">
     </div>
 
     <div class="form-field">
       <label for="pot-size">Ruukun koko (l)</label>
-      <input id="pot-size" type="number" required min="0.1" step="0.1">
+      <input id="pot-size" type="number" required min="0.1" step="0.1" value="1.5">
     </div>
 
     <div class="form-field">
       <label for="watering-method">Kastelutapa</label>
       <select id="watering-method">
         <option>Anna maan kuivua</option>
-        <option>Anna pintamullan kuivua</option>
+        <option selected>Anna pintamullan kuivua</option>
         <option>Pidä maa kosteana</option>
         <option>Kastele runsaasti ja anna kuivua</option>
         <option>Pohjakastelu</option>
@@ -57,4 +57,5 @@
 
     <button class="btn btn--primary" data-nav="flow2-insert-sensor-2" style="width: 100%;">Lisää kasvi</button>
   </form>
+  <script>document.getElementById('last-watered').value = new Date().toISOString().slice(0,10);</script>
 </main>
