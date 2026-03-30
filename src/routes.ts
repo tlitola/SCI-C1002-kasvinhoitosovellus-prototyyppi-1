@@ -11,6 +11,14 @@ export const routes = {
     title: "Valitse talous",
     screen: "flow1-select-household-all-watered.html",
   },
+  "flow1-select-household-both-watered": {
+    title: "Valitse talous",
+    screen: "flow1-select-household-both-watered.html",
+  },
+  "flow1-select-household-uurremuori-watered": {
+    title: "Valitse talous",
+    screen: "flow1-select-household-uurremuori-watered.html",
+  },
   "flow1-dipoli-all-watered": {
     title: "Dipoli",
     screen: "flow1-dipoli-all-watered.html",
