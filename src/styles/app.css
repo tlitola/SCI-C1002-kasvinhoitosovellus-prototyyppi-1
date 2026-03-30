@@ -753,3 +753,38 @@ body {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* Image modal */
+.img-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.img-modal[hidden] {
+  display: none;
+}
+
+.img-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.img-modal__img {
+  position: relative;
+  max-width: 100%;
+  max-height: 90dvh;
+  border-radius: 12px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.plant-detail__img {
+  cursor: zoom-in;
+}

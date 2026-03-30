@@ -18,6 +18,24 @@ function clearPendingTimeouts() {
   while (pendingTimeouts.length) clearTimeout(pendingTimeouts.pop());
 }
 
+export function initImageModal(): void {
+  const modal = document.getElementById("img-modal")!;
+  const modalImg = modal.querySelector<HTMLImageElement>(".img-modal__img")!;
+  const backdrop = modal.querySelector<HTMLElement>(".img-modal__backdrop")!;
+
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (target.classList.contains("plant-detail__img")) {
+      modalImg.src = (target as HTMLImageElement).src;
+      modalImg.alt = (target as HTMLImageElement).alt;
+      modal.hidden = false;
+    }
+  });
+
+  backdrop.addEventListener("click", () => { modal.hidden = true; });
+  modalImg.addEventListener("click", () => { modal.hidden = true; });
+}
+
 export function bindInteractions(container: HTMLElement): void {
   stopActiveStream();
   clearPendingTimeouts();
