@@ -18,6 +18,13 @@ function clearPendingTimeouts() {
   while (pendingTimeouts.length) clearTimeout(pendingTimeouts.pop());
 }
 
+let confettiInstance: ((opts: object) => void) | null = null;
+
+export function initConfetti(): void {
+  const canvas = document.getElementById("confetti-canvas") as HTMLCanvasElement;
+  confettiInstance = (window as any).confetti.create(canvas, { resize: true, useWorker: false });
+}
+
 export function initImageModal(): void {
   const modal = document.getElementById("img-modal")!;
   const modalImg = modal.querySelector<HTMLImageElement>(".img-modal__img")!;
@@ -37,6 +44,30 @@ export function initImageModal(): void {
 }
 
 export function bindInteractions(container: HTMLElement): void {
+  // Fire confetti on all-watered screens
+  if (container.querySelector("[data-confetti]") && confettiInstance) {
+    const fire = confettiInstance;
+    const opts = {
+      particleCount: 70,
+      spread: 70,
+      startVelocity: 45,
+      gravity: 1,
+      ticks: 300,
+      colors: ["#2d7d46", "#22c55e", "#86efac", "#4ade80", "#bbf7d0", "#3b82f6", "#93c5fd"],
+    };
+    const images = Array.from(container.querySelectorAll<HTMLImageElement>("img"));
+    const loads = images.map(img =>
+      img.complete ? Promise.resolve() : new Promise<void>(resolve => {
+        img.addEventListener("load",  () => resolve(), { once: true });
+        img.addEventListener("error", () => resolve(), { once: true });
+      })
+    );
+    Promise.all(loads).then(() => requestAnimationFrame(() => {
+      fire({ ...opts, angle: 50,  origin: { x: -0.1, y: 0.65 } });
+      fire({ ...opts, angle: 130, origin: { x:  1.1, y: 0.65 } });
+    }));
+  }
+
   stopActiveStream();
   clearPendingTimeouts();
 
