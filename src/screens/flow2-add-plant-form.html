@@ -31,7 +31,13 @@
     </div>
 
     <div class="form-field">
-      <label for="pot-size">Ruukun koko (l)</label>
+      <label for="pot-size">Ruukun koko (l) <button type="button" class="tooltip-trigger" data-toggle="pot-size-tip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8.01"/><line x1="12" y1="12" x2="12" y2="16"/></svg></button></label>
+      <div id="pot-size-tip" class="tooltip-box" hidden>
+        <p>Tarkka arvo ei ole tarpeen – karkea arvio riittää.</p>
+        <p>Mittaa ruukun säde (r) ja korkeus (h) senttimetreinä.</p>
+        <p><strong>Likiarvo (lieriö):</strong> π × r² × h ÷ 1000 litraa</p>
+        <p>Esim. säde 7,5 cm, korkeus 20 cm → π × 7,5² × 20 ÷ 1000 ≈ 3,5 l</p>
+      </div>
       <input id="pot-size" type="number" required min="0.1" step="0.1" value="3.0">
     </div>
 
