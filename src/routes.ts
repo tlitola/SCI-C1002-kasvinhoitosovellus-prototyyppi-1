@@ -7,6 +7,10 @@ export const routes = {
     title: "Valitse talous",
     screen: "flow1-select-household.html",
   },
+  "flow1-dipoli-intro": {
+    title: "Valitse talous",
+    screen: "flow1-dipoli-intro.html",
+  },
   "flow1-select-household-all-watered": {
     title: "Valitse talous",
     screen: "flow1-select-household-all-watered.html",
@@ -78,6 +82,10 @@ export const routes = {
   "flow1-agave-detail": {
     title: "Kasvi – Kunnossa",
     screen: "flow1-agave-detail.html",
+  },
+  "dipoli-general-info": {
+    title: "Yleisohjeet ja tiedot",
+    screen: "dipoli-general-info.html",
   },
   "flow3-select-household": {
     title: "Valitse talous",
